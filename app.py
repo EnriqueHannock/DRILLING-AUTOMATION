@@ -96,7 +96,7 @@ df_holes = pd.DataFrame(holes)
 # Mark current rig position on the map
 df_holes.loc[0, 'Status'] = "CURRENT RIG POSITION"
 
-st.scatter_chart(df_holes, x="Y", y="X", color="Status", size=100)
+st.scatter_chart(df_holes, x="Y", y="X", color="Status", size=800)
 st.caption("Visualization of the 20-hole drill plan pattern.")
 
 # --- 6. FEEDBACK TO CONTROL ROOM ---
