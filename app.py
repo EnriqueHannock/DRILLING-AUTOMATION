@@ -90,18 +90,18 @@ st.subheader("Planned Blast Pattern (Full Area View)")
 holes = []
 for i in range(5):
     for j in range(10):
-        holes.append({"X": 100 + (i * target_burden), "Y": 200 + (j * target_spacing), "Status": "Planned"})
+        holes.append({"X": 500 + (i * target_burden), "Y": 800 + (j * target_spacing), "Status": "Planned"})
 
 df_holes = pd.DataFrame(holes)
 # Mark current rig position on the map
 df_holes.loc[0, 'Status'] = "CURRENT RIG POSITION"
 
-st.scatter_chart(df_holes, x="Y", y="X", color="Status", size=150)
+st.scatter_chart(df_holes, x="Y", y="X", color="Status", size=100)
 st.caption("Visualization of the 20-hole drill plan pattern.")
 
 # --- 6. FEEDBACK TO CONTROL ROOM ---
 st.divider()
-st.subheader("📡 Live Feed to Control Room")
+st.subheader("Live Feed to Control Room")
 st.write("Information currently being logged at the console:")
 
 # Real-time Data Transmission Simulation
